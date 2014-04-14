@@ -23,9 +23,11 @@ public class Klammern {
 	
 		String userInput = null;
 		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(
+				System.in));
 		
-		System.out.println("Bitte geben sie die zu testende Zeichenfolge ein: ");
+		System.out.println("Bitte geben sie die zu testende Zeichenfolge "
+				+ "ein: ");
 		try {
 			userInput = br.readLine();
 		} catch (IOException e) {

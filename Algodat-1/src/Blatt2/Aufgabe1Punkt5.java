@@ -12,7 +12,8 @@ import helper.LinkedListStackSicher;
 public class Aufgabe1Punkt5 {
 	
 	public static void main(String[] args){
-		LinkedListStackSicher<Integer> stack = new LinkedListStackSicher<Integer>();
+		LinkedListStackSicher<Integer> stack = 
+				new LinkedListStackSicher<Integer>();
 	
 		stack.push(1);
 		System.out.println(stack.isEmpty());
