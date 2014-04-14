@@ -30,7 +30,7 @@ public class LinkedList<Item> implements Iterable<Item>{
 		return new ListIterator();
 	}
 	
-	private class ListIterator implements Iterator<Item>{
+	protected class ListIterator implements Iterator<Item>{
 		private Knoten<Item> current = first;
 		public boolean hasNext(){
 			return (current != null);
@@ -76,9 +76,11 @@ public class LinkedList<Item> implements Iterable<Item>{
 	public Item getFromHead(){
 		Item item = first.item;
 		first = first.next;
-		if(isEmpty())
+		if(isEmpty()){
 			last = null;
-		this.anzahlKnoten--;
+			this.anzahlKnoten = 0;
+		}else
+			this.anzahlKnoten--;
 		return item;
 	}
 	
